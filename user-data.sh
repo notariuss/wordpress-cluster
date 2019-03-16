@@ -34,7 +34,7 @@ sudo cp -r wordpress/* /app
 
 # write wp-config.php
 
-cat > /app/wp-config.php << EOF
+sudo cat > /app/wp-config.php << EOF
 <?php
 
 define( 'DB_NAME', 'wordpress' );
@@ -58,8 +58,6 @@ define( 'AUTH_SALT',        '),s$zGc@PRH:S$|7=@@!2BFZm@cG|z{Dyg%G,hFgb@~Hqr_+P42
 define( 'SECURE_AUTH_SALT', '1W|^UOZ1D&x88<,9OCVZ*5[e5#9 #qw.A>!d(m{Y 4H:2($JpBW-KzoNJTsj(}>W' );
 define( 'LOGGED_IN_SALT',   '=|3<VQ!V[ LPykRt[s;5;M BVC*z~~|+3>)9tfDq0X93FK(o_ @IV4guow%tLWoF' );
 define( 'NONCE_SALT',       '6G1T_0LVBZMG_mv79hE+VDxUZg]A9j.ag9,P8tp22wadPm^(E4RM:&Lbwqns<%6L' );
-
-/**#@-*/
 
 $table_prefix = 'wp2_';
 
