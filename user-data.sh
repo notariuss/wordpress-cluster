@@ -34,7 +34,7 @@ sudo cp -r wordpress/* /app
 
 # write wp-config.php
 
-sudo cat > /app/wp-config.php << EOF
+sudo echo "
 <?php
 
 define( 'DB_NAME', 'wordpress' );
@@ -66,6 +66,7 @@ define( 'WP_DEBUG', false );
 if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', dirname( __FILE__ ) . '/' );
 }
+" > /app/wp-config.php
 
 require_once( ABSPATH . 'wp-settings.php' );
 
