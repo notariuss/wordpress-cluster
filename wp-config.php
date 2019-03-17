@@ -1,5 +1,8 @@
 <?php
 
+if (strpos($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false)
+       $_SERVER['HTTPS']='on';
+
 define( 'DB_NAME', 'wordpress' );
 
 define( 'DB_USER', 'watermelon' );
@@ -11,7 +14,6 @@ define( 'DB_HOST', 'wordpress-new.cluster-ccx4pjir0nbf.eu-central-1.rds.amazonaw
 define( 'DB_CHARSET', 'utf8mb4' );
 
 define( 'DB_COLLATE', '' );
-
 
 define( 'AUTH_KEY',         'T24b>rHI-Pf=A!%wvF{cjn&q#<!FR+G2 @uv)=mkwSz)<~E)UBLx;nKi2jNB/i9~' );
 define( 'SECURE_AUTH_KEY',  'ZG(E?&eyjY%6:l+ph>KO?}}HB!4$?Zgxf]$ngKR!W_j)@G%NhH}w/Z?b&|trW5tm' );
