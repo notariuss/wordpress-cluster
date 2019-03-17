@@ -12,18 +12,6 @@ sudo apt-get update &&  sudo apt-get install -y \
    $(lsb_release -cs) \
    stable" && sudo apt-get update && sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 
-# install nfs-common
-
-sudo apt-get install nfs-common -y
-
-# install efs
-
-git clone https://github.com/aws/efs-utils
-sudo apt-get -y install binutils
-cd efs-utils
-./build-deb.sh
-sudo apt-get -y install ./build/amazon-efs-utils*deb
-
 # download wp files
 
 sudo wget https://ru.wordpress.org/latest-ru_RU.tar.gz
@@ -38,4 +26,4 @@ cd /app && sudo wget https://raw.githubusercontent.com/notariuss/wordpress-clust
 
 # start docker
 
-sudo docker run -p 80:80 -v /app:/app webdevops/php-apache:7.3
+sudo docker run -p 80:80 -v /app:/app fruitydev/nginx-php
