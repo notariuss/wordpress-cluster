@@ -22,7 +22,7 @@ define( 'SECURE_AUTH_SALT', '1W|^UOZ1D&x88<,9OCVZ*5[e5#9 #qw.A>!d(m{Y 4H:2($JpBW
 define( 'LOGGED_IN_SALT',   '=|3<VQ!V[ LPykRt[s;5;M BVC*z~~|+3>)9tfDq0X93FK(o_ @IV4guow%tLWoF' );
 define( 'NONCE_SALT',       '6G1T_0LVBZMG_mv79hE+VDxUZg]A9j.ag9,P8tp22wadPm^(E4RM:&Lbwqns<%6L' );
 
-$table_prefix = 'wp2_';
+$table_prefix = 'wp_';
 
 define( 'WP_DEBUG', false );
 
