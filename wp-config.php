@@ -13,9 +13,6 @@ define( 'DB_CHARSET', 'utf8mb4' );
 define( 'DB_COLLATE', '' );
 
 
-define('WP_HOME', 'https://www.coocki3.com');
-define('WP_SITEURL', 'https://www.coocki3.com');
-
 define( 'AUTH_KEY',         'T24b>rHI-Pf=A!%wvF{cjn&q#<!FR+G2 @uv)=mkwSz)<~E)UBLx;nKi2jNB/i9~' );
 define( 'SECURE_AUTH_KEY',  'ZG(E?&eyjY%6:l+ph>KO?}}HB!4$?Zgxf]$ngKR!W_j)@G%NhH}w/Z?b&|trW5tm' );
 define( 'LOGGED_IN_KEY',    '=^^z1=3_w]rQ<S/_j2zyfeR2w7}[J<HT/O&3RS&I|!yZ9RL;|Tx)U^3%j`,8x?4P' );
