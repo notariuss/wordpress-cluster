@@ -31,3 +31,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 require_once( ABSPATH . 'wp-settings.php' );
+
+define('WP_HOME','https://www.coocki3.com');
+define('WP_HOME','https://www.coocki3.com');
