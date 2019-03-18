@@ -26,6 +26,7 @@ sudo apt-get -y install ./build/amazon-efs-utils*deb
 
 # mount
 
+sudo mkdir /app
 sudo mount -t efs fs-7156cc28:/ /app
 sudo chown 700:700 -R /app
 
