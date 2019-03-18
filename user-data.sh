@@ -12,17 +12,22 @@ sudo apt-get update &&  sudo apt-get install -y \
    $(lsb_release -cs) \
    stable" && sudo apt-get update && sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 
-# download wp files
+# install nfs-common
 
-sudo wget https://ru.wordpress.org/latest-ru_RU.tar.gz
-sudo tar -xzvf latest-ru_RU.tar.gz
-mkdir /app
-sudo chmod 777 /app
-sudo cp -r wordpress/* /app
+sudo apt-get install nfs-common -y
 
-# write wp-config.php
+# install efs
 
-cd /app && sudo wget https://raw.githubusercontent.com/notariuss/wordpress-cluster/master/wp-config.php
+git clone https://github.com/aws/efs-utils
+sudo apt-get -y install binutils
+cd efs-utils
+./build-deb.sh
+sudo apt-get -y install ./build/amazon-efs-utils*deb
+
+# mount
+
+sudo mount -t efs fs-7156cc28:/ /app
+sudo chown 700:700 -R /app
 
 # start docker
 
